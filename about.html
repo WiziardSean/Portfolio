@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sean McWilliams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+   <style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.about-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  position: relative;
+}
+
+.text-block {
+  width: 45%;
+  padding: 40px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.text-block:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.2);
+}
+
+.text-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+}
+
+.text-block p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Alternating layout */
+.text-block.left {
+  align-self: flex-start;
+}
+
+.text-block.right {
+  align-self: flex-end;
+}
+
+/* Subtle connecting line */
+.about-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #333, #777);
+  transform: translateX(-50%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-block {
+    width: 100%;
+    align-self: center;
+  }
+
+  .about-section::before {
+    display: none;
+  }
+}
+
+  </style>
+
+  <style>
+    /* ====== GLOBAL RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== BASE STYLES ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ====== HEADER / NAVBAR ====== */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* ====== LOGO ====== */
+nav h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav h1:hover {
+  color: #c8a951; /* Rolex gold tone */
+}
+
+/* ====== NAV LINKS ====== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Hover underline effect */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c8a951;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active Page Indicator */
+nav ul li a.active {
+  color: #c8a951;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* ====== RESPONSIVE MENU ====== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* ====== PAGE CONTENT BASE ====== */
+section.content {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+section.content h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+section.content p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c8a951;
+  color: #0a0a0a;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e4ca7c;
+  transform: translateY(-3px);
+}
+  </style>
+
+  
+ 
+</head>
+<body>
+  <header class="nav-header">
+    <nav class="navbar">
+      <h1 class="logo">SEAN McWILLIAMS</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="about-section">
+    <div class="text-block left">
+      <h2>My Journey</h2>
+      <p>I started my journey with a deep curiosity about technology and creativity. From coding my first project to building web experiences, every step has been a lesson in growth and innovation.</p>
+    </div>
+
+    <div class="text-block right">
+      <h2>My Passion</h2>
+      <p>I’m passionate about 
+        design, innovation, and creating solutions that make a real impact. I believe in simplicity, precision, and meaningful digital experiences.</p>
+        <img src="about back1.jpg" alt="About background" width="350" height="350">
+
+      </div>
+
+    <div class="text-block left">
+      <h2>My Vision</h2>
+      <p>My goal is to bridge creativity with technology — crafting projects that inspire, educate, and connect people around the world.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sean McWilliams. All rights reserved.</p>
+  </footer>
+</body>
+</html>

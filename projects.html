@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | [Your Name]</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+     <style>
+    /* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #eaeaea;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #00fff5;
+  text-shadow: 0 0 10px #00fff5;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00fff5;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0a0a0a, #121212);
+  padding: 2rem;
+}
+
+.hero-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #00fff5;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  filter: drop-shadow(0 0 15px #00fff5);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #00fff5;
+  text-shadow: 0 0 8px #00fff5;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin: 1rem auto 2rem;
+  max-width: 600px;
+}
+
+.btn {
+  padding: 0.9rem 1.8rem;
+  background: linear-gradient(90deg, #00fff5, #00e0ff);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 20px #00fff5;
+  transform: scale(1.05);
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.about-preview p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #ccc;
+}
+
+.link {
+  color: #00fff5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- PROJECTS ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: left;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,255,245,0.3);
+}
+
+.btn-outline {
+  display: inline-block;
+
+  </style>
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <h1>[Your Name]</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="content">
+  <h2>My Projects</h2>
+  
+  <div class="project">
+    <h3>Water Quality Analysis in Urban Rivers</h3>
+    <p><strong>Course:</strong> Environmental Research Methods | <strong>Date:</strong> Spring 2025</p>
+    <p>Conducted a field study assessing water contamination levels using pH and nitrate indicators.</p>
+  </div>
+
+  <div class="project">
+    <h3>Data Visualization for Population Trends</h3>
+    <p><strong>Course:</strong> Data Science Fundamentals</p>
+    <p>Created an interactive dashboard using Tableau to visualize population growth between 2000–2020.</p>
+  </div>
+
+  <div class="project">
+    <h3>Sustainable Campus Initiative Proposal</h3>
+    <p><strong>Course:</strong> Environmental Policy and Management</p>
+    <p>Collaborated in a 3-person team to draft a waste management proposal, adopted for pilot testing in 2025.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 SEAN MCWILLIAMS</p>
+</footer>
+</body>
