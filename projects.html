@@ -5,174 +5,248 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | [Your Name]</title>
   <link rel="stylesheet" href="style.css">
+<style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
 
+.about-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  position: relative;
+}
+
+.text-block {
+  width: 45%;
+  padding: 40px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.text-block:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.2);
+}
+
+.text-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+}
+
+.text-block p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Alternating layout */
+.text-block.left {
+  align-self: flex-start;
+}
+
+.text-block.right {
+  align-self: flex-end;
+}
+
+/* Subtle connecting line */
+.about-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #333, #777);
+  transform: translateX(-50%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-block {
+    width: 100%;
+    align-self: center;
+  }
+
+  .about-section::before {
+    display: none;
+  }
+}
+
+  </style>
 
   <style>
+    /* ====== GLOBAL RESET ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ====== BASE STYLES ====== */
 body {
-  background: #0a0a0a;
-  color: #eaeaea;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
-/* ---------- NAVBAR ---------- */
-.navbar {
+/* ====== HEADER / NAVBAR ====== */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(12px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 40px;
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #00fff5;
-  text-shadow: 0 0 10px #00fff5;
+/* ====== LOGO ====== */
+nav h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
+nav h1:hover {
+  color: #c8a951; /* Rolex gold tone */
+}
+
+/* ====== NAV LINKS ====== */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 30px;
 }
 
-nav ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
+nav ul li {
   position: relative;
 }
 
-nav ul li a:hover,
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Hover underline effect */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c8a951;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active Page Indicator */
 nav ul li a.active {
-  color: #00fff5;
+  color: #c8a951;
 }
 
-/* ---------- HERO ---------- */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* ====== RESPONSIVE MENU ====== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* ====== PAGE CONTENT BASE ====== */
+section.content {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 0 40px;
   text-align: center;
-  min-height: 90vh;
-  flex-direction: column;
-  background: linear-gradient(135deg, #0a0a0a, #121212);
-  padding: 2rem;
 }
 
-.hero-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #00fff5;
-  margin-bottom: 1.5rem;
-  object-fit: cover;
-  filter: drop-shadow(0 0 15px #00fff5);
+section.content h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-.hero h1 span {
-  color: #00fff5;
-  text-shadow: 0 0 8px #00fff5;
-}
-
-.tagline {
+section.content p {
+  color: #ccc;
   font-size: 1.1rem;
-  color: #aaa;
-  margin: 1rem auto 2rem;
-  max-width: 600px;
+  max-width: 700px;
+  margin: 0 auto 30px;
 }
 
 .btn {
-  padding: 0.9rem 1.8rem;
-  background: linear-gradient(90deg, #00fff5, #00e0ff);
-  border: none;
-  color: #000;
-  font-weight: 600;
-  border-radius: 40px;
+  display: inline-block;
+  background-color: #c8a951;
+  color: #0a0a0a;
+  padding: 12px 25px;
+  border-radius: 30px;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-  box-shadow: 0 0 20px #00fff5;
-  transform: scale(1.05);
+  background-color: #e4ca7c;
+  transform: translateY(-3px);
 }
-
-/* ---------- SECTIONS ---------- */
-section {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-
-.about-preview p {
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  color: #ccc;
-}
-
-.link {
-  color: #00fff5;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-/* ---------- PROJECTS ---------- */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.project-card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: left;
-  transition: 0.4s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0,255,245,0.3);
-}
-
-.btn-outline {
-  display: inline-block;
-
   </style>
-  </style>
+
+
 </head>
 <body>
 <header>
@@ -188,17 +262,17 @@ h2 {
   </nav>
 </header>
 
-  <h2>My Projects</h2>
-  
-  <div class="text-block right">
-    <h1>PAMOJA HUB</h1>
-    <p>PamojaHub is an innovative platform designed to simplify your grocery shopping by providing real-time price comparisons across local supermarkets. By aggregating data into one accessible hub, it empowers users to find the best deals and maximize their savings on every household essential. Our system eliminates the guesswork of manual price checking, ensuring you always get the most value for your money. Whether you are meal planning or restocking your pantry, PamojaHub makes informed shopping effortless and efficient.</p>
+   <section class="about-section">
+    <div class="text-block left">
+      <h2>PAMOJA HUB</h2>
+      <p>PamojaHub is an innovative platform designed to simplify your grocery shopping by providing real-time price comparisons across local supermarkets. By aggregating data into one accessible hub, it empowers users to find the best deals and maximize their savings on every household essential. Our system eliminates the guesswork of manual price checking, ensuring you always get the most value for your money. Whether you are meal planning or restocking your pantry, PamojaHub makes informed shopping effortless and efficient.</p>
     </div>
 
- <div class="text-block left">
-  <h2>GHOST PRO</h2>
-  <p>Our platform provides an independent audit of public projects, comparing official government progress reports against actual ground reality. By documenting stalled works and diverted funds, we expose the gap between "paper projects" and the physical truth. We empower citizens to upload real-time evidence to ensure taxpayer money builds the nation rather than lining pockets.</p>
-  </div>
+    <div class="text-block right">
+      <h2>GHOST PRO</h2>
+      <p>Our platform provides an independent audit of public projects, comparing official government progress reports against actual ground reality. By documenting stalled works and diverted funds, we expose the gap between "paper projects" and the physical truth. We empower citizens to upload real-time evidence to ensure taxpayer money builds the nation rather than lining pockets.</p>
+      </div>
+  </section>
 
   
 
