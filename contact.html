@@ -4,120 +4,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Sean Owiti</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background: radial-gradient(circle at top left, #050505, #0a0a0a);
+      background: #050505;
       color: #eaeaea;
       font-family: "Poppins", sans-serif;
-      line-height: 1.7;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1.5rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 1rem 3rem;
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
     header h1 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #00fff5;
-      text-shadow: 0 0 10px #00fff5;
-      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(0, 255, 245, 0.5);
+      margin: 0;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.8rem;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
-      color: #ccc;
+      color: #888;
       text-decoration: none;
-      font-weight: 500;
+      font-size: 0.9rem;
       transition: 0.3s;
     }
 
-    nav ul li a:hover,
-    nav ul li a.active {
+    nav ul li a:hover, nav ul li a.active {
       color: #00fff5;
     }
 
-    .contact {
-      max-width: 700px;
-      margin: 6rem auto;
+    .contact-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 600px;
+      width: 100%;
       text-align: center;
-      padding: 0 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     }
 
-    .contact h2 {
-      font-size: 2.3rem;
-      font-family: "Playfair Display", serif;
-      color: #00fff5;
-      text-shadow: 0 0 12px #00fff5;
-      margin-bottom: 1.5rem;
-    }
-
-    .contact p {
-      color: #ccc;
+    .contact-card h2 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      font-size: 1.1rem;
+      color: #fff;
     }
 
-    .contact a {
-      color: #00fff5;
+    .contact-card p {
+      color: #aaa;
+      margin-bottom: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-item {
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
       text-decoration: none;
-      transition: 0.3s;
+      color: #fff;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
+    .grid-item:hover {
+      background: rgba(0, 255, 245, 0.05);
+      border-color: #00fff5;
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      color: #00fff5;
     }
 
     footer {
       padding: 2rem;
       text-align: center;
-      color: #888;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      background: #0b0b0b;
+      color: #555;
+      font-size: 0.8rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <nav>
       <h1>Sean Owiti</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>I’d love to connect! Reach out through any of the platforms below:</p>
-
-    <p><strong>Email:</strong> <a href="mailto:owitisean2025@email.com">owitisean2025@email.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sean-owiti-a53bba388/" target="_blank">linkedin.com/in/sean-owiti-a53bba388</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/WiziardSean" target="_blank">github.com/WiziardSean</a></p>
-  </section>
+  <main class="contact-container">
+    <div class="contact-card">
+      <h2>Let's Connect</h2>
+      <p>Available for projects, collaborations, or just a coffee chat about tech and accountability.</p>
+      
+      <div class="grid">
+        <a href="mailto:owitisean2025@email.com" class="grid-item">
+          <span class="icon">✉️</span>
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/WiziardSean" target="_blank" class="grid-item">
+          <span class="icon">💻</span>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/sean-owiti-a53bba388/" target="_blank" class="grid-item">
+          <span class="icon">🔗</span>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </main>
 
   <footer>
-    <p>© 2025 Sean Owiti</p>
+    <p>© 2025 Sean Owiti • Nairobi, Kenya</p>
   </footer>
+
 </body>
 </html>
