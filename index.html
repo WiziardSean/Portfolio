@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sean Owiti — Full-Stack Developer &amp; Technical Lead</title>
+<meta name="description" content="Sean Owiti — Full-stack developer, startup CEO, and IT professional based in Nairobi, Kenya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="tabbar" id="tabbar">
+  <div class="tabbar-inner">
+    <a href="#top" class="tab-logo">
+      <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+      <span class="tab-logo-text">sean@nairobi<span class="cursor-blink">:~$</span></span>
+    </a>
+    <nav class="tab-links" id="tab-links">
+      <a href="#about" data-cmd="about">about</a>
+      <a href="#skills" data-cmd="skills">skills</a>
+      <a href="#experience" data-cmd="experience">experience</a>
+      <a href="#projects" data-cmd="projects">projects</a>
+      <a href="#education" data-cmd="education">education</a>
+      <a href="#contact" data-cmd="contact" class="tab-cta">contact</a>
+    </nav>
+    <button class="tab-toggle" id="tab-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO / TERMINAL ================= -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+
+      <div class="terminal" id="terminal">
+        <div class="terminal-titlebar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="terminal-title">sean@nairobi — zsh — 80×24</span>
+        </div>
+        <div class="terminal-body" id="terminal-body" tabindex="0">
+          <div class="terminal-log" id="terminal-log"></div>
+          <div class="terminal-input-row">
+            <span class="prompt"><span class="prompt-user">sean</span><span class="prompt-at">@</span><span class="prompt-host">nairobi</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span></span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+            <span class="terminal-caret" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="terminal-hint">try <button class="hint-btn" data-fill="help">help</button>, <button class="hint-btn" data-fill="whoami">whoami</button>, or <button class="hint-btn" data-fill="projects">projects</button> — or just scroll ↓</div>
+      </div>
+
+      <div class="hero-side">
+        <p class="eyebrow">// full-stack developer &amp; technical lead</p>
+        <h1 class="hero-name">Sean Owiti</h1>
+        <p class="hero-tagline">I build systems that run — inventory engines, campus platforms, local-AI tools, and the infrastructure under them. Based in Nairobi, shipping for Kenyan SMEs and beyond.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">./view-projects</a>
+          <a href="#contact" class="btn btn-ghost">./get-in-touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">03</span><span class="stat-label">roles held<br>concurrently</span></div>
+          <div class="stat"><span class="stat-num">04</span><span class="stat-label">shipped<br>projects</span></div>
+          <div class="stat"><span class="stat-num">NBO</span><span class="stat-label">Nairobi<br>Kenya</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="section-inner about-grid">
+      <div class="panel id-badge">
+        <div class="panel-titlebar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="panel-title">badge.card — read only</span>
+        </div>
+        <div class="id-badge-body">
+          <div class="id-photo-wrap">
+            <img src="assets/sean.jpg" alt="Portrait of Sean Owiti" class="id-photo">
+          </div>
+          <div class="id-strip">
+            <span class="id-label">NAME</span>
+            <span class="id-value">Sean Owiti</span>
+            <span class="id-label">ROLE</span>
+            <span class="id-value">CEO &amp; Technical Team Lead</span>
+            <span class="id-label">BASE</span>
+            <span class="id-value">Nairobi, Kenya</span>
+            <span class="id-label">STATUS</span>
+            <span class="id-value id-status"><span class="pulse-dot"></span>Available for select work</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <p class="section-eyebrow">01 — about</p>
+        <h2 class="section-title">From lab assistant to startup CEO, still hands-on with the code.</h2>
+        <p class="body-text">I'm a technology professional splitting my time between running the technical side of a startup, tutoring web development, and building websites. That mix means I move comfortably between writing production React and Python, diagnosing a dead SSD, and explaining the DOM to a first-year student — often in the same week.</p>
+        <p class="body-text">I care about building things that solve a real, local problem first: retail systems that survive patchy internet, platforms that get Kenyan university teams talking to each other, and tools that put local AI in the hands of businesses that can't afford API bills. I'm currently completing a Diploma in Information Technology at PAC University, on top of a Certificate earned in 2025.</p>
+        <div class="about-tags">
+          <span class="tag">React</span>
+          <span class="tag">Python / Flask</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Ollama / Llama 3</span>
+          <span class="tag">Linux &amp; WSL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow">02 — skills</p>
+      <h2 class="section-title">System info</h2>
+      <p class="section-sub">A quick <code>lscpu</code> for what I actually work with day to day.</p>
+
+      <div class="skills-grid">
+        <div class="panel skill-panel">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">frontend.log</span></div>
+          <div class="panel-body">
+            <ul class="skill-list">
+              <li><span class="skill-name">React</span><span class="skill-bar"><span style="width:88%"></span></span></li>
+              <li><span class="skill-name">HTML5 / CSS3</span><span class="skill-bar"><span style="width:92%"></span></span></li>
+              <li><span class="skill-name">Responsive Design</span><span class="skill-bar"><span style="width:85%"></span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel skill-panel">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">backend.log</span></div>
+          <div class="panel-body">
+            <ul class="skill-list">
+              <li><span class="skill-name">Python / Flask</span><span class="skill-bar"><span style="width:86%"></span></span></li>
+              <li><span class="skill-name">Node.js</span><span class="skill-bar"><span style="width:80%"></span></span></li>
+              <li><span class="skill-name">MySQL &amp; REST APIs</span><span class="skill-bar"><span style="width:82%"></span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel skill-panel">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">ai.log</span></div>
+          <div class="panel-body">
+            <ul class="skill-list">
+              <li><span class="skill-name">Local LLM Integration</span><span class="skill-bar"><span style="width:78%"></span></span></li>
+              <li><span class="skill-name">Ollama Orchestration</span><span class="skill-bar"><span style="width:75%"></span></span></li>
+              <li><span class="skill-name">Llama 3 Deployment</span><span class="skill-bar"><span style="width:74%"></span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel skill-panel">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">infra.log</span></div>
+          <div class="panel-body">
+            <ul class="skill-list">
+              <li><span class="skill-name">Ubuntu CLI / WSL</span><span class="skill-bar"><span style="width:90%"></span></span></li>
+              <li><span class="skill-name">Git &amp; GitHub</span><span class="skill-bar"><span style="width:88%"></span></span></li>
+              <li><span class="skill-name">Hardware Diagnostics</span><span class="skill-bar"><span style="width:83%"></span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <div class="section-inner">
+      <p class="section-eyebrow">03 — experience</p>
+      <h2 class="section-title">Process list</h2>
+      <p class="section-sub">What's currently running, roughly ordered by how it started.</p>
+
+      <div class="proc-table">
+        <div class="proc-row proc-header">
+          <span>PID</span><span>PROCESS</span><span>ORG</span><span>SINCE</span><span>STATE</span>
+        </div>
+
+        <div class="proc-row">
+          <span class="proc-pid">01</span>
+          <span class="proc-name">CEO &amp; Technical Team Lead</span>
+          <span class="proc-org">Startup Enterprise</span>
+          <span class="proc-since">Jun 2025</span>
+          <span class="proc-state proc-running">running</span>
+        </div>
+        <div class="proc-detail">Directing operations and product roadmap for an emerging technology startup, managing a cross-functional team of developers, content editors, and business strategists. Owning full-stack architecture across React frontends and Python/Node.js backend services, and coordinating milestones with business and marketing leads.</div>
+
+        <div class="proc-row">
+          <span class="proc-pid">02</span>
+          <span class="proc-name">Technical Tutor — Web Development</span>
+          <span class="proc-org">Independent Instruction</span>
+          <span class="proc-since">May 2026</span>
+          <span class="proc-state proc-running">running</span>
+        </div>
+        <div class="proc-detail">Authoring simplified, effective lesson plans and practical worksheets for foundational web technologies (HTML/CSS), and mentoring aspiring developers on modern engineering workflows, terminal usage, and clean coding practices.</div>
+
+        <div class="proc-row">
+          <span class="proc-pid">03</span>
+          <span class="proc-name">IT Technician / Lab Assistant</span>
+          <span class="proc-org">PAC University</span>
+          <span class="proc-since">Ongoing</span>
+          <span class="proc-state proc-running">running</span>
+        </div>
+        <div class="proc-detail">Keeping campus computer labs operational — hardware troubleshooting, OS installation and configuration, and hands-on support for student and staff systems.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section section-alt" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow">04 — projects</p>
+      <h2 class="section-title">ls ~/projects</h2>
+      <p class="section-sub">A directory listing of what I've shipped, sorted by ambition.</p>
+
+      <div class="projects-grid">
+
+        <article class="panel project-card">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">inventory-system/</span></div>
+          <div class="panel-body">
+            <h3 class="project-title">Intelligent Inventory Management System</h3>
+            <p class="project-role">Lead Architect &amp; Developer</p>
+            <p class="project-desc">A data-driven retail management platform that moves businesses off manual tracking and onto automated analytics — eliminating overstocking and stockouts, with demand forecasting via a 30-day moving average and seed data modeled on Kenyan retail products.</p>
+            <div class="project-stack">
+              <span class="tag tag-sm">React</span><span class="tag tag-sm">Flask</span><span class="tag tag-sm">SQLAlchemy</span><span class="tag tag-sm">Local AI</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project-card">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">bridgecode/</span></div>
+          <div class="panel-body">
+            <h3 class="project-title">BridgeCode Platform</h3>
+            <p class="project-role">Full-Stack Developer</p>
+            <p class="project-desc">A collaborative platform built to close the communication and operational gaps between universities — specifically for coordinating application development competitions across campuses.</p>
+            <div class="project-stack">
+              <span class="tag tag-sm">React</span><span class="tag tag-sm">Node.js</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project-card">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">healthlink-nexus/</span></div>
+          <div class="panel-body">
+            <h3 class="project-title">HealthLink Nexus</h3>
+            <p class="project-role">Systems Designer</p>
+            <p class="project-desc">A comprehensive cloud computing system proposal built to optimize healthcare connectivity and data management — from architecture diagrams to a full stakeholder presentation.</p>
+            <div class="project-stack">
+              <span class="tag tag-sm">Cloud Architecture</span><span class="tag tag-sm">Systems Design</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project-card">
+          <div class="panel-titlebar"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span><span class="panel-title">portfolio/</span></div>
+          <div class="panel-body">
+            <h3 class="project-title">Personal Portfolio Platform</h3>
+            <p class="project-role">Frontend Developer</p>
+            <p class="project-desc">A clean, responsive personal site built to showcase projects and deployment work — the predecessor to the page you're looking at right now.</p>
+            <div class="project-stack">
+              <span class="tag tag-sm">HTML5</span><span class="tag tag-sm">CSS3</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section" id="education">
+    <div class="section-inner">
+      <p class="section-eyebrow">05 — education</p>
+      <h2 class="section-title">git log --education</h2>
+
+      <div class="commit-line">
+        <div class="commit">
+          <span class="commit-dot"></span>
+          <div class="commit-body">
+            <p class="commit-msg">Diploma in Information Technology <span class="commit-tag">ongoing</span></p>
+            <p class="commit-meta">PAC University · Advanced software development, database design (MySQL), systems architecture &amp; infrastructure management</p>
+          </div>
+        </div>
+        <div class="commit">
+          <span class="commit-dot commit-dot-done"></span>
+          <div class="commit-body">
+            <p class="commit-msg">Certificate in Information Technology <span class="commit-tag commit-tag-done">2025</span></p>
+            <p class="commit-meta">PAC University · Foundational IT coursework and lab practice</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section-contact" id="contact">
+    <div class="section-inner">
+      <p class="section-eyebrow">06 — contact</p>
+      <h2 class="section-title">Let's build something.</h2>
+      <p class="section-sub">Open to full-stack roles, technical collaborations, and interesting problems. Fastest way to reach me is email.</p>
+
+      <div class="contact-grid">
+        <a class="panel contact-card" href="mailto:owitisean2025@gmail.com">
+          <span class="contact-icon" aria-hidden="true">&#9993;</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">owitisean2025@gmail.com</span>
+        </a>
+        <a class="panel contact-card" href="tel:+254115162996">
+          <span class="contact-icon" aria-hidden="true">&#9742;</span>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+254 115 162 996</span>
+        </a>
+        <a class="panel contact-card" href="https://github.com/WiziardSean" target="_blank" rel="noopener">
+          <span class="contact-icon" aria-hidden="true">&#8635;</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/WiziardSean</span>
+        </a>
+        <div class="panel contact-card contact-card-static">
+          <span class="contact-icon" aria-hidden="true">&#128205;</span>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Tena Estate, Nairobi, Kenya</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <span>&copy; <span id="year"></span> Sean Owiti — built with HTML, CSS &amp; JavaScript, no framework.</span>
+    <a href="#top" class="footer-top">back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
